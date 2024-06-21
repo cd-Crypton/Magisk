@@ -383,7 +383,7 @@ find_boot_image() {
   elif [ ! -z $SLOT ]; then
     BOOTIMAGE=$(find_block "ramdisk$SLOT" "recovery_ramdisk$SLOT" "init_boot$SLOT" "boot$SLOT")
   else
-    BOOTIMAGE=$(find_block ramdisk recovery_ramdisk kern-a android_boot kernel bootimg init_boot boot lnx boot_a)
+    BOOTIMAGE=$(find_block ramdisk recovery_ramdisk kern-a android_boot kernel bootimg boot boot_a init_boot lnx)
   fi
   if [ -z $BOOTIMAGE ]; then
     # Lets see what fstabs tells me
